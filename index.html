@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Bavaria S.A.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Definición de colores personalizados para Tailwind */
+        :root {
+            --color-red: #e31b25;
+            --color-black: #000000;
+            --color-white: #fefefd;
+        }
+
+        .bg-bavaria-red { background-color: var(--color-red); }
+        .text-bavaria-red { color: var(--color-red); }
+        .bg-bavaria-black { background-color: var(--color-black); }
+        .text-bavaria-white { color: var(--color-white); }
+        .bg-bavaria-white { background-color: var(--color-white); }
+        
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .slide {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            padding-bottom: 5rem;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Estilos para el texto y las tarjetas */
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .slide-md-row {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- Diapositiva 1: Identidad Cultural -->
+    <div id="slide1" class="slide active flex-col justify-between">
+        <div class="w-full h-auto flex flex-col items-center justify-center bg-bavaria-red p-4 md:p-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-bavaria-white text-center">IDENTIDAD CULTURAL</h1>
+            <p class="text-bavaria-white text-base md:text-lg mt-4 text-center">
+                Bavaria ha construido su identidad como un símbolo de unión y celebración nacional, mezclando tradición e innovación para una conexión emocional con los colombianos.
+            </p>
+        </div>
+        <div class="w-full flex-1 flex flex-col md:flex-row items-start justify-around px-4 md:px-10 pt-4 md:pt-10 pb-4 md:pb-4 space-y-4 md:space-y-0 md:space-x-8">
+            <div class="flex flex-col items-center w-full md:w-1/3 p-4 bg-white rounded-xl shadow-lg">
+                <div class="w-full h-48 rounded-xl overflow-hidden">
+                    <img src="https://i.revistapym.com.co/cms/2023/03/02135520/aguila-portada.jpeg?w=412&d=2.625" alt="Campaña publicitaria de la marca Águila" class="w-full h-full object-cover">
+                </div>
+                <p class="mt-4 text-bavaria-black text-base text-center">
+                    <strong>Orgullo colombiano:</strong> Las marcas de Bavaria están asociadas a momentos sociales y culturales como el fútbol y los carnavales, reforzando la unión nacional.
+                </p>
+            </div>
+            <div class="flex flex-col items-center w-full md:w-1/3 p-4 bg-white rounded-xl shadow-lg">
+                <div class="w-full h-48 rounded-xl overflow-hidden flex flex-row items-center justify-center space-x-2">
+                    <div class="w-1/2 h-full overflow-hidden">
+                        <img src="https://www.bavaria.co/sites/g/files/seuoyk1666/files/2023-09/bg-historia-02.jpg" alt="Antigua fábrica de Bavaria" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-1/2 h-full overflow-hidden">
+                        <img src="https://forbes.co/_next/image?url=https%3A%2F%2Fcdn.forbes.co%2F2025%2F09%2FEdificio_127_16x9_Legal-2.png&w=3840&q=75" alt="Edificio moderno de Bavaria" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <p class="mt-4 text-bavaria-black text-base text-center">
+                    <strong>Tradición e innovación:</strong> Nacida en 1889, la empresa mezcla lo clásico con lo moderno, apoyando la sostenibilidad y nuevas experiencias de consumo.
+                </p>
+            </div>
+            <div class="flex flex-col items-center w-full md:w-1/3 p-4 bg-white rounded-xl shadow-lg">
+                <div class="w-full h-48 rounded-xl overflow-hidden">
+                    <img src="https://publicitychannel.wordpress.com/wp-content/uploads/2017/04/poker-dia-amigos.png?w=1400" alt="Grupo de amigos celebrando con Cerveza Poker" class="w-full h-full object-cover">
+                </div>
+                <p class="mt-4 text-bavaria-black text-base text-center">
+                    <strong>Conexión emocional:</strong> La empresa forma parte de la vida cotidiana de los colombianos, presente en celebraciones, reuniones y eventos familiares.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 2: Valores y Misión -->
+    <div id="slide2" class="slide slide-md-row bg-bavaria-black text-bavaria-white p-4 md:p-10">
+        <div class="flex flex-col w-full md:w-1/2 space-y-4">
+            <h2 class="text-xl md:text-2xl font-bold mb-2 text-bavaria-red">Valores</h2>
+            <p class="mb-2">Bavaria se rige por un conjunto de valores que guían su operación y su relación con los empleados y el público. Estos incluyen la honestidad y sinceridad, el respeto mutuo, la responsabilidad individual, el trabajo en equipo y la pasión por los resultados. La cultura corporativa, conocida como "Beer Office", busca reflejar estos valores, promoviendo un ambiente de camaradería y diversión donde se valora el desempeño y la innovación.</p>
+            <h2 class="text-xl md:text-2xl font-bold mb-2 text-bavaria-red">Misión</h2>
+            <p class="mb-2">"En Bavaria soñamos con un futuro con más motivos para brindar"</p>
+        </div>
+        <div class="flex flex-col w-full md:w-1/2 p-4 md:p-10 items-center justify-center space-y-4 bg-bavaria-black">
+            <div class="w-4/5 h-1/2 overflow-hidden rounded-xl">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/JIA5TNAQ5ZH55NTJEOEWQ4HSCE.jpg" alt="Empleados de Bavaria trabajando en equipo en un ambiente de oficina." class="w-full h-full object-cover">
+            </div>
+            <div class="w-4/5 h-1/2 overflow-hidden rounded-xl">
+                <img src="https://www.bavaria.co/sites/g/files/seuoyk1666/files/inline-images/BAVARIA_TIENDAS_Mesa%20de%20trabajo%201_0.jpg" alt="Tienda de Bavaria con productos exhibidos" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 3: Patrocinios -->
+    <div id="slide3" class="slide flex-col justify-between items-center">
+        <div class="w-full h-auto flex flex-col items-center justify-center bg-bavaria-black p-4 md:p-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-bavaria-red text-center">PATROCINIOS</h1>
+            <p class="text-bavaria-white text-base md:text-lg mt-4 text-center">
+                Bavaria fortalece su conexión con los colombianos a través de patrocinios en deporte, cultura y entretenimiento.
+            </p>
+        </div>
+        <div class="w-full flex-1 flex flex-col md:flex-row items-start justify-around px-4 md:px-10 pt-4 md:pt-10 pb-4 md:pb-4 space-y-4 md:space-y-0 md:space-x-8">
+            <div class="flex flex-col items-center w-full md:w-1/2 p-4 bg-white rounded-xl shadow-lg">
+                <h2 class="text-xl font-bold mb-2 text-bavaria-red text-center">Deporte</h2>
+                <div class="w-full flex flex-col items-center space-y-4">
+                    <div class="w-full h-64 rounded-xl overflow-hidden flex justify-center items-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2-5jru7qouQ?si=TDIPWQmaSlTFZMa0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="w-full rounded-xl overflow-hidden flex justify-center items-center">
+                        <img src="https://www.cervezaaguila.com/sites/g/files/seuoyk441/files/2024-05/DESKTOP%20505%20X%20547%20PX_Mesa%20de%20trabajo%201%20copia_0.png" alt="Imagen publicitaria de Cerveza Águila con la Selección Colombia" class="w-full h-auto object-contain">
+                    </div>
+                </div>
+                <p class="mt-4 text-bavaria-black text-base text-center">
+                    Bavaria tiene una fuerte presencia en el fútbol, a través de su marca Águila, que patrocina la Selección Colombia y la liga profesional colombiana (DIMAYOR). Este patrocinio crea un vínculo emocional con los aficionados y posiciona a la marca como la "cerveza oficial del fútbol colombiano".
+                </p>
+            </div>
+            <div class="flex flex-col items-center w-full md:w-1/2 p-4 bg-white rounded-xl shadow-lg">
+                <h2 class="text-xl font-bold mb-2 text-bavaria-red text-center">Cultura y entretenimiento</h2>
+                <div class="w-full flex-1 overflow-hidden flex justify-center items-center">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DNbQL0exZvm/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/reel/DNbQL0exZvm/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <div style=" display: flex; flex-direction: row; align-items: center;">
+                                    <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                                    <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                        <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                                        <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                                    </div>
+                                </div>
+                                <div style="padding: 19% 0;"></div>
+                                <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                    <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                                <g>
+                                                    <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div style="padding-top: 8px;">
+                                    <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div>
+                                </div>
+                                <div style="padding: 12.5% 0;"></div>
+                                <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                    <div>
+                                        <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div>
+                                        <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div>
+                                        <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div>
+                                    </div>
+                                    <div style="margin-left: 8px;">
+                                        <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div>
+                                        <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div>
+                                    </div>
+                                    <div style="margin-left: auto;">
+                                        <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div>
+                                        <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div>
+                                        <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div>
+                                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div>
+                                </div>
+                            </a>
+                            <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                <a href="https://www.instagram.com/reel/DNbQL0exZvm/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por Cerveza Aguila (@cervezaaguila)</a>
+                            </p>
+                        </div>
+                    </blockquote>
+                </div>
+                <p class="mt-4 text-bavaria-black text-base text-center">
+                    Patrocina carnavales, ferias regionales, conciertos y festivales musicales, vinculando sus marcas a la diversidad cultural del país, como el Festival Estéreo Picnic y el Concierto de Conciertos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diapositiva 4: Alianzas estratégicas -->
+    <div id="slide4" class="slide flex flex-col items-center justify-center bg-bavaria-red text-bavaria-white p-4 md:p-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-bavaria-white text-center">Alianzas estratégicas</h1>
+        <div class="w-full flex-1 flex flex-col items-center px-4 md:px-20 pt-4 md:pt-10 pb-4 md:pb-4">
+            <p class="text-lg text-center mb-4">Además de los patrocinios tradicionales, Bavaria establece alianzas con organizaciones para promover la sostenibilidad, la educación y el emprendimiento. Un ejemplo es su alianza con el Comité Olímpico Colombiano, para impulsar el deporte y los jóvenes talentos. La empresa también se ha aliado con la CAF (Banco de Desarrollo de América Latina y el Caribe) para impulsar la inclusión financiera y digitalización de pequeños empresarios. También ha tenido alianza con grandes compañías nacionales como lo fue su edición especial de Club Colombia con Café Juan Valdez.</p>
+            <img src="https://www.bavaria.co/sites/g/files/seuoyk1666/files/inline-images/Post_ClubColombia_Linkedin_Lanzamiento-MOCA.png" alt="Imagen de los 10 principios de Bavaria" class="w-full h-auto object-contain max-h-screen">
+        </div>
+    </div>
+
+    <!-- Controles de Navegación -->
+    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 flex space-x-4">
+        <button id="prevBtn" class="btn bg-gray-300 text-gray-800 hover:bg-gray-400">Anterior</button>
+        <button id="nextBtn" class="btn bg-bavaria-red text-bavaria-white hover:bg-bavaria-red/80">Siguiente</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => changeSlide(1));
+        document.getElementById('prevBtn').addEventListener('click', () => changeSlide(-1));
+
+        // Inicializar la primera diapositiva
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+    <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>
